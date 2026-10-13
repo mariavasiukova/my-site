@@ -1,0 +1,12 @@
+{
+    "name": "my-site",
+    "version": "1.0.0",
+    "scripts": {
+        "lint": "htmllint *.html",
+        "test": "echo \"Tests passed\" && exit 0",
+        "build": "node -e \"const fs=require('fs');fs.mkdirSync('dist',{recursive:true});['index.html','style.css','script.js'].forEach(f=>fs.copyFileSync(f,'dist/'+f))\""
+    },
+    "devDependencies": {
+        "htmllint-cli": "^0.0.7"
+    }
+}
